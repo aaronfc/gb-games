@@ -19,8 +19,8 @@ First who gets three in a row (horizontal, vertical or diagonal) wins.
 Check the commit history and releases.
 
 ## Tasks
-- [ ] Screen: Splash/welcome – PRESS START.
-- [ ] Screen: Game.
+- [X] Screen: Splash/welcome – PRESS START.
+- [X] Screen: Game.
 - [ ] Draw the empty board – background.
 - [ ] Draw pieces in any position of the board.
 - [ ] Temporary: Allow players to play by turns – automatically until board is filled.

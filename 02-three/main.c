@@ -5,9 +5,7 @@
 #include <rand.h>
 #include <time.h>
 #include <gbdk/console.h>
-
-// Constants
-#define INACTIVE_JOYPAD_THRESHOLD 100
+#include <gb/drawing.h>
 
 // Game scenes enum
 enum GameScene {
@@ -20,7 +18,7 @@ enum GameScene {
 enum GameScene currentScene = NONE;
 uint8_t joypadKey = 0;
 
-void welcome_scene()
+void welcome_scene(void)
 {
     // Render only when entering the scene
     if (currentScene != WELCOME) {
@@ -46,15 +44,27 @@ void welcome_scene()
     }
 }
 
-void gameplay_scene()
+void gameplay_scene(void)
 {
     if (currentScene != GAMEPLAY) {
 	// Clear screen
 	cls();
 
-	// Print welcome message
-	printf("Gameplay scene\n");
-	printf("Press start to go back\n");
+	// Draw board
+	color(BLACK, WHITE, SOLID);
+	box(10, 10, 110, 110, M_NOFILL);
+	line(10, 10, 110, 110);
+	line(10, 110, 110, 10);
+	line(60, 10, 60, 110);
+	line(10, 60, 110, 60);
+
+	// Draw light grey circle at the center
+	color(LTGREY, WHITE, SOLID);
+	circle(60, 60, 5, M_FILL);
+
+	// Draw dark grey circle at the right
+	color(DKGREY, WHITE, SOLID);
+	circle(110, 60, 5, M_FILL);
 
 	// Track new scene
 	currentScene = GAMEPLAY;

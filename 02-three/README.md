@@ -21,8 +21,9 @@ Check the commit history and releases.
 ## Tasks
 - [X] Screen: Splash/welcome – PRESS START.
 - [X] Screen: Game.
-- [ ] Draw the empty board – background.
+- [X] Draw the empty board and some pieces.
 - [ ] Draw pieces in any position of the board.
+- [ ] Move board to background and draw using tiles.
 - [ ] Temporary: Allow players to play by turns – automatically until board is filled.
 - [ ] Detect winning condition and show winning screen.
 - [ ] Define UX for player to make move – show options, confirmation.
